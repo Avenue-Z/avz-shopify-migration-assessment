@@ -81,7 +81,7 @@ export default function AssessmentWizard() {
       <footer className="sticky bottom-0 z-50 px-6 py-4" style={{ background: '#000000', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
         <div className="max-w-2xl mx-auto flex items-center justify-between">
           <button
-            onClick={prevSection}
+            onClick={() => { prevSection(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
             className="transition-all hover:opacity-80"
             style={{
               background: '#3a3a3a',
@@ -97,7 +97,17 @@ export default function AssessmentWizard() {
           </button>
 
           <button
-            onClick={nextSection}
+            onClick={() => {
+              const passed = nextSection();
+              if (passed) {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              } else {
+                requestAnimationFrame(() => {
+                  const firstError = document.querySelector('.text-red-400');
+                  firstError?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                });
+              }
+            }}
             className="transition-transform hover:scale-105 active:scale-95 uppercase tracking-wider"
             style={{
               background: 'linear-gradient(135deg, #FFFC60, #60FF80, #60FDFF)',

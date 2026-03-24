@@ -147,7 +147,7 @@ function generateSummary(brandName: string, scores: AllScores): string {
 
   // Definition confidence descriptor
   let definitionDesc: string;
-  if (scores.definitionConfidence.percentage >= 70) definitionDesc = 'Few';
+  if (scores.definitionConfidence.percentage >= 70) definitionDesc = 'A few';
   else if (scores.definitionConfidence.percentage >= 50) definitionDesc = 'Some';
   else definitionDesc = 'Several';
 

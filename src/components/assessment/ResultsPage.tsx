@@ -157,7 +157,7 @@ export default function ResultsPage({ results, onRestart }: ResultsPageProps) {
               <h3 className="text-lg font-bold text-brand-green mb-3">Top Strengths</h3>
               <ul className="space-y-2">
                 {strengths.map((s, i) => (
-                  <li key={i} className="flex items-start gap-2">
+                  <li key={i} className="flex items-center gap-2">
                     <span className="text-brand-green mt-0.5">+</span>
                     <span className="text-white text-sm">{s}</span>
                   </li>
@@ -170,7 +170,7 @@ export default function ResultsPage({ results, onRestart }: ResultsPageProps) {
               <h3 className="text-lg font-bold text-brand-yellow mb-3">Top Considerations</h3>
               <ul className="space-y-2">
                 {considerations.map((c, i) => (
-                  <li key={i} className="flex items-start gap-2">
+                  <li key={i} className="flex items-center gap-2">
                     <span className="text-brand-yellow mt-0.5">!</span>
                     <span className="text-white text-sm">{c}</span>
                   </li>
