@@ -5,14 +5,6 @@ export const questions: Question[] = [
   // Section 1: Company + Commerce Profile
   // ════════════════════════════════════════════════════════════════
   {
-    id: 'Q1',
-    number: 1,
-    section: 1,
-    text: 'What is the name of your brand?',
-    type: 'short_text',
-    required: true,
-  },
-  {
     id: 'Q2',
     number: 2,
     section: 1,
@@ -123,6 +115,7 @@ export const questions: Question[] = [
     text: 'What is driving interest in Shopify?',
     type: 'multi_select',
     options: [
+      'Agentic Commerce',
       'Lower maintenance costs',
       'Better site speed',
       'Easier merchandising/content updates',
@@ -137,7 +130,7 @@ export const questions: Question[] = [
     scoring: {
       type: 'multi_select',
       category: 'shopify_fit',
-      scorableCount: 9,
+      scorableCount: 10,
       excludedOptions: ['Other'],
     },
   },
@@ -868,12 +861,12 @@ export const questions: Question[] = [
     id: 'Q43',
     number: 43,
     section: 11,
-    text: 'Would you like a readiness review with our team?',
+    text: 'How would you like to receive your results?',
     type: 'single_select',
     options: [
-      'Yes book a discovery call',
-      'Yes send me my score and next steps',
-      'Not yet',
+      'Book a discovery call to review my results',
+      'Email me my results and book a follow-up call',
+      'Just email me my results for now',
     ],
     required: true,
   },

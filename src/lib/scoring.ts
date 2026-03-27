@@ -109,8 +109,8 @@ function getShopifyFitBand(pct: number): ShopifyFitBand {
 function getMigrationReadinessBand(pct: number): MigrationReadinessBand {
   if (pct >= 80) return 'Ready to scope now';
   if (pct >= 60) return 'Discovery-ready';
-  if (pct >= 40) return 'Early planning stage';
-  return 'Foundational work needed';
+  if (pct >= 40) return 'Discovery & planning recommended';
+  return 'Let\'s build your foundation together';
 }
 
 function getDefinitionConfidenceBand(pct: number): DefinitionConfidenceBand {

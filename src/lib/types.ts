@@ -86,7 +86,7 @@ export type Answers = Record<string, AnswerValue>;
 // ── Scoring Results ─────────────────────────────────────────────
 
 export type ShopifyFitBand = 'Strong fit' | 'Good fit' | 'Fit needs validation' | 'Fit unclear';
-export type MigrationReadinessBand = 'Ready to scope now' | 'Discovery-ready' | 'Early planning stage' | 'Foundational work needed';
+export type MigrationReadinessBand = 'Ready to scope now' | 'Discovery-ready' | 'Discovery & planning recommended' | 'Let\'s build your foundation together';
 export type DefinitionConfidenceBand = 'Clearly defined' | 'Mostly defined' | 'Several unknowns remain' | 'Too undefined for accurate scoping';
 export type ComplexityBand = 'Low' | 'Moderate' | 'High' | 'Enterprise / architect-led';
 

@@ -143,10 +143,7 @@ export default function ResultsPage({ results, onRestart }: ResultsPageProps) {
           }}
         >
           <p className="text-sm text-text-muted leading-relaxed">
-            A strong Shopify Fit Score does not always mean a simple migration. Some businesses are an excellent fit for Shopify but still require a more complex implementation.
-          </p>
-          <p className="text-sm text-text-muted leading-relaxed mt-3">
-            Likewise, a lower Readiness or Definition Confidence Score does not mean Shopify is the wrong choice. It may simply mean there are still open questions to resolve before accurate planning and scoping can begin.
+            Every successful migration starts with understanding. Whether you&#39;re ready to scope now or need help clarifying requirements, we&#39;ll guide you through the preparation process to ensure a smooth transition to Shopify.
           </p>
         </div>
 

@@ -121,8 +121,8 @@ const CONSIDERATION_RULES: ConsiderationRule[] = [
 
 // ── Summary paragraph generation ────────────────────────────────
 
-function generateSummary(brandName: string, scores: AllScores): string {
-  const brand = brandName || 'Your brand';
+function generateSummary(scores: AllScores): string {
+  const brand = 'Your brand';
 
   // Shopify fit descriptor
   let fitDesc: string;
@@ -190,8 +190,6 @@ function selectCta(scores: AllScores): { text: string; type: CtaType } {
 
 export function generateResults(answers: Answers): AssessmentResults {
   const scores = calculateAllScores(answers);
-  const brandName = (answers['Q1'] as string) || '';
-
   // Collect strengths (up to 3)
   const strengths = STRENGTH_RULES
     .filter((rule) => rule.test(scores, answers))
@@ -206,12 +204,12 @@ export function generateResults(answers: Answers): AssessmentResults {
     .slice(0, 3)
     .map((r) => r.text);
 
-  const summary = generateSummary(brandName, scores);
+  const summary = generateSummary(scores);
   const cta = selectCta(scores);
 
   return {
     scores,
-    brandName,
+    brandName: '',
     summary,
     strengths,
     considerations,
